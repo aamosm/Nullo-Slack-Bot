@@ -1,8 +1,22 @@
+# Dependencies
 node_modules/
+
+# Secrets
 .env
 .env.*
 !.env.example
+
+# Runtime data and generated files
 data/
 cache/
-*.sqlite*
+*.sqlite
+*.sqlite3
+*.db
 alien-42.png
+*.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

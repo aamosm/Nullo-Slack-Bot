@@ -1,19 +1,24 @@
 {
   "name": "nullo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "type": "module",
-  "description": "Slack bot for This Alien Does Not Exist",
+  "description": "This Alien Does Not Exist, in Slack",
+  "engines": {
+    "node": ">=24 <25"
+  },
   "scripts": {
     "start": "node app.mjs",
-    "probe": "node probe.mjs"
-  },
-  "engines": {
-    "node": ">=22"
+    "dev": "node --watch app.mjs",
+    "setup": "playwright install chromium",
+    "probe": "node scripts/probe.mjs",
+    "doctor": "node scripts/doctor.mjs",
+    "test": "node --test",
+    "check": "node --check app.mjs && node --test"
   },
   "dependencies": {
-    "@slack/bolt": "^4.4.0",
-    "dotenv": "^16.4.7",
-    "playwright": "^1.56.0"
+    "@slack/bolt": "5.1.0",
+    "dotenv": "17.3.1",
+    "playwright": "1.64.1"
   }
 }

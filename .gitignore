@@ -1,22 +1,25 @@
-# Dependencies
 node_modules/
-
-# Secrets
 .env
 .env.*
+*.env
+*.env.*
 !.env.example
-
-# Runtime data and generated files
+!**/*.env.example
 data/
 cache/
 *.sqlite
-*.sqlite3
+*.sqlite-*
 *.db
-alien-42.png
+*.db-*
 *.log
-
-# OS / editor
+*.zip
+*.pem
+*.key
+.ssh/
+secrets/
+playwright-report/
+test-results/
+.cache/
 .DS_Store
 Thumbs.db
-.vscode/
-.idea/
+

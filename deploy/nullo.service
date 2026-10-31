@@ -1,0 +1,26 @@
+[Unit]
+Description=Nullo Slack bot
+Wants=network-online.target
+After=network-online.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+User=nullo
+Group=nullo
+WorkingDirectory=/opt/nullo
+EnvironmentFile=/etc/nullo/bot.env
+ExecStart=/usr/bin/node /opt/nullo/app.mjs
+Restart=always
+RestartSec=10
+TimeoutStopSec=50
+KillMode=control-group
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+
+[Install]
+WantedBy=multi-user.target
+

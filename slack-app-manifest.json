@@ -1,0 +1,62 @@
+{
+  "display_information": {
+    "name": "Nullo",
+    "description": "Aliens, encounters, and channel decisions from This Alien Does Not Exist.",
+    "background_color": "#191b22"
+  },
+  "features": {
+    "bot_user": {
+      "display_name": "Nullo",
+      "always_online": true
+    },
+    "slash_commands": [
+      {
+        "command": "/nullo",
+        "description": "Discover aliens and manage your collection",
+        "usage_hint": "[random | raw | SEED | mine | active SEED | help]",
+        "should_escape": false
+      },
+      {
+        "command": "/nullo-duel",
+        "description": "Fight a random alien or two exact seeds",
+        "usage_hint": "[SEED] [OPPONENT_SEED]",
+        "should_escape": false
+      },
+      {
+        "command": "/nullo-pick",
+        "description": "Choose fairly between distinct options",
+        "usage_hint": "option | option | option",
+        "should_escape": false
+      },
+      {
+        "command": "/nullo-decide",
+        "description": "Let two aliens battle to decide",
+        "usage_hint": "option | option",
+        "should_escape": false
+      },
+      {
+        "command": "/nullo-ping",
+        "description": "Check Nullo and its website connection",
+        "usage_hint": "[site | image]",
+        "should_escape": false
+      }
+    ]
+  },
+  "oauth_config": {
+    "scopes": {
+      "bot": [
+        "commands",
+        "chat:write",
+        "files:write"
+      ]
+    }
+  },
+  "settings": {
+    "interactivity": {
+      "is_enabled": true
+    },
+    "org_deploy_enabled": false,
+    "socket_mode_enabled": true,
+    "token_rotation_enabled": false
+  }
+}
